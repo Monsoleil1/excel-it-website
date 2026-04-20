@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Excel IT - Votre partenaire en informatique, énergie solaire et électronique à Ouagadougou, Burkina Faso">
+    <title>Excel IT - L’excellence, notre référence</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./logo/Logo.jpg.jpeg" type="image/jpeg">
+    
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blue: {
+                            primary: '#00AEEF',
+                            dark: '#1e3a8a'
+                        },
+                        orange: {
+                            primary: '#F7941D',
+                            light: '#fb923c'
+                        }
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-white text-gray-900">
+    
+    <!-- Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-3">
+                <img src="./logo/Logo.jpg.jpeg" alt="Logo Excel IT" class="h-12 w-auto object-contain">
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#hero" class="text-gray-700 hover:text-blue-dark font-medium transition-colors">Accueil</a>
+                
+                <div class="relative group">
+                    <button id="mega-menu-trigger" class="text-gray-700 hover:text-blue-dark font-medium transition-colors flex items-center gap-1">
+                        Nos Solutions
+                        <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <a href="#about" class="text-gray-700 hover:text-blue-dark font-medium transition-colors">À Propos</a>
+                <a href="#team" class="text-gray-700 hover:text-blue-dark font-medium transition-colors">Notre Équipe</a>
+                <a href="#faq" class="text-gray-700 hover:text-blue-dark font-medium transition-colors">FAQ</a>
+                <a href="#contact" class="bg-[#00AEEF] hover:bg-[#F7941D] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
+                    Contact
+                </a>
+                <a href="#contact" class="bg-[#00AEEF] hover:bg-[#F7941D] text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300">
+                    Demander un devis
+                </a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        
+        <!-- Mega Menu -->
+        <div id="mega-menu" class="hidden bg-white border-t border-gray-100 shadow-lg">
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                    <div class="mega-menu-column">
+                        <h3 class="text-lg font-bold text-[#00AEEF] mb-4">🌐 Informatique et Technologies</h3>
+                        <ul class="space-y-3">
+                            <li class="mega-menu-item" data-image="./assets/Image_Informatique.jpg" data-title="Réseaux LAN / WAN" data-desc="Garantissez une connectivité ultra-rapide et sécurisée pour votre entreprise">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Réseaux LAN / WAN</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/vente_materiel.jpg" data-title="Vente de Matériel" data-desc="Bénéficiez de matériel informatique de haute qualité et performant">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Vente de Matériel</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/maintenance_support.jpg" data-title="Maintenance et Support" data-desc="Un support technique réactif pour assurer la continuité de vos activités">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Maintenance et Support</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Optimisation_de_Systèmes.jpg" data-title="Optimisation de Systèmes" data-desc="Maximisez les performances de vos systèmes informatiques pour une productivité optimale">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Optimisation de Systèmes</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mega-menu-column">
+                        <h3 class="text-lg font-bold text-[#00AEEF] mb-4">☀️ Énergie et Solaire</h3>
+                        <ul class="space-y-3">
+                            <li class="mega-menu-item" data-image="./assets/Image_Solaire.jpg" data-title="Systèmes Photovoltaïques" data-desc="Produisez votre propre énergie verte et réduisez vos factures d'électricité">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Systèmes Photovoltaïques</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Dimensionnement_energetique.jpg" data-title="Dimensionnement Énergétique" data-desc="Une étude précise pour un système solaire parfaitement adapté à vos besoins">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Dimensionnement Énergétique</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/electricite_Generale.jpg" data-title="Électricité Générale" data-desc="Des installations électriques conformes aux normes de sécurité internationales">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Électricité Générale</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Image_Solaire.jpg" data-title="Installations Industrielles" data-desc="Des solutions énergétiques robustes pour vos sites industriels">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Installations Industrielles</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mega-menu-column">
+                        <h3 class="text-lg font-bold text-[#00AEEF] mb-4">🔧 Électronique et Maintenance</h3>
+                        <ul class="space-y-3">
+                            <li class="mega-menu-item" data-image="./assets/Diagnostic-de_pannes.jpg" data-title="Diagnostic de pannes" data-desc="Identifiez rapidement les causes des pannes pour une réaction efficace">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Diagnostic de pannes</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Reparation_de_cartes.jpg" data-title="Réparation de cartes" data-desc="Redonnez vie à vos équipements grâce à notre expertise en électronique">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Réparation de cartes</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Maintenance_preventive.jpg" data-title="Maintenance préventive" data-desc="Évitez les pannes coûteuses avec un programme de maintenance régulier">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Maintenance préventive</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Expertise_specifique.jpg" data-title="Expertise spécifique" data-desc="Bénéficiez de notre savoir-faire technique sur des équipements spécialisés">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Expertise spécifique</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mega-menu-column">
+                        <h3 class="text-lg font-bold text-[#00AEEF] mb-4">📚 Formation et Conseil</h3>
+                        <ul class="space-y-3">
+                            <li class="mega-menu-item" data-image="./assets/Image_Formation.jpg" data-title="Renforcement capacités" data-desc="Améliorez les compétences de votre équipe pour une performance optimale">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Renforcement capacités</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Image_Formation.jpg" data-title="Accompagnement choix" data-desc="Faites les bons choix technologiques avec notre accompagnement expert">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Accompagnement choix</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Image_Formation.jpg" data-title="Conseil infrastructures" data-desc="Optimisez vos infrastructures techniques pour répondre à vos besoins">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Conseil infrastructures</span>
+                                </a>
+                            </li>
+                            <li class="mega-menu-item" data-image="./assets/Image_Formation.jpg" data-title="Formations sur mesure" data-desc="Des formations adaptées à vos besoins spécifiques pour une réussite garantie">
+                                <a href="#services" class="text-gray-600 hover:text-[#F7941D] transition-all duration-300 flex items-center gap-2">
+                                    <span>Formations sur mesure</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hidden lg:block">
+                        <h3 class="text-lg font-bold text-[#00AEEF] mb-4">Aperçu</h3>
+                        <div id="mega-menu-preview" class="bg-gray-100 rounded-xl overflow-hidden shadow-md">
+                            <div id="preview-placeholder" class="text-gray-400 text-center p-8 min-h-72 flex flex-col items-center justify-center">
+                                <svg class="w-16 h-16 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <p class="text-sm">Survolez un service</p>
+                            </div>
+                            
+                            <div id="preview-content" class="hidden">
+                                <div id="preview-image-container" class="w-full h-40 bg-gray-200 relative overflow-hidden">
+                                    <div id="preview-loading" class="absolute inset-0 flex items-center justify-center bg-gray-200">
+                                        <div class="animate-spin rounded-full h-8 w-8 border-4 border-gray-300 border-t-[#00AEEF]"></div>
+                                    </div>
+                                    <img id="preview-image" src="" alt="" class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4 bg-white">
+                                    <h4 id="preview-title" class="font-bold text-[#00AEEF] mb-2"></h4>
+                                    <p id="preview-desc" class="text-sm text-gray-600"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="#hero" class="block text-gray-700 hover:text-blue-dark font-medium py-2">Accueil</a>
+                
+                <div class="mobile-accordion">
+                    <button class="mobile-accordion-trigger w-full flex items-center justify-between text-gray-700 font-medium py-2">
+                    Nos Solutions
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div class="mobile-accordion-content hidden pl-4 mt-2 space-y-2">
+                    <a href="#services" class="block text-gray-600 hover:text-orange-primary py-1">🌐 Informatique</a>
+                    <a href="#services" class="block text-gray-600 hover:text-orange-primary py-1">☀️ Énergie Solaire</a>
+                    <a href="#services" class="block text-gray-600 hover:text-orange-primary py-1">🔧 Électronique</a>
+                    <a href="#services" class="block text-gray-600 hover:text-orange-primary py-1">📚 Formation</a>
+                </div>
+            </div>
+            
+            <a href="#about" class="block text-gray-700 hover:text-blue-dark font-medium py-2">À Propos</a>
+            <a href="#team" class="block text-gray-700 hover:text-blue-dark font-medium py-2">Notre Équipe</a>
+            <a href="#faq" class="block text-gray-700 hover:text-blue-dark font-medium py-2">FAQ</a>
+            <a href="#contact" class="block text-gray-700 hover:text-blue-dark font-medium py-2">Contact</a>
+            <a href="#contact" class="block bg-[#00AEEF] hover:bg-[#F7941D] text-white px-6 py-2 rounded-lg font-semibold text-center mt-4">
+                Demander un devis
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed" style="background-image: url('./assets/background.jpg'); filter: blur(3px); transform: scale(1.05);"></div>
+        
+        <div class="absolute inset-0 bg-gradient-to-br from-black/70 via-black/60 to-black/70"></div>
+        
+        <div class="container mx-auto px-4 relative z-10 text-center text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                Votre partenaire expert en
+                <span id="typewriter" class="text-orange-light"></span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-4 max-w-3xl mx-auto opacity-90">
+                Nous concevons et déployons des infrastructures techniques innovantes pour propulser les entreprises et simplifier le quotidien des particuliers à Ouagadougou et partout au Burkina Faso.
+            </p>
+            <p class="text-lg md:text-xl mb-8 font-medium text-blue-100 italic">
+                L’excellence, notre référence.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="bg-[#00AEEF] hover:bg-[#F7941D] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                    Découvrir nos solutions
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-white hover:bg-[#F7941D] text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                    Demander un devis gratuit
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-dark mb-4">Qui sommes-nous ?</h2>
+                <div class="w-24 h-1 bg-orange-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+                        Solidement ancrée au cœur de Ouagadougou, Excel IT est bien plus qu’une SARL Unipersonnelle : c’est un centre d’excellence dédié à l’ingénierie de pointe. Nous concevons des solutions où la technologie rencontre la résilience, garantissant ainsi à nos partenaires une continuité d’activité totale et une infrastructure à l’épreuve du futur.
+                    </p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <img src="./assets/Expertise_specifique.jpg" alt="Ingénieur en intervention" class="w-full h-auto rounded-[24px] shadow-lg">
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#00AEEF]">
+                    <h3 class="text-xl font-bold text-blue-dark mb-6">Nos Engagements</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5"></i>
+                            <span>Solutions Durables pour un ROI pérenne</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="clock" class="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5"></i>
+                            <span>Respect des Délais garantissant votre productivité</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="users" class="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5"></i>
+                            <span>Accompagnement Personnalisé sur-mesure</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="wrench" class="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5"></i>
+                            <span>Suivi Professionnel avec maintenance proactive</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-xl border-t-4 border-[#F7941D]">
+                    <h3 class="text-xl font-bold text-blue-dark mb-6">Nos Valeurs</h3>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="target" class="w-6 h-6 text-[#F7941D] flex-shrink-0 mt-0.5"></i>
+                            <span>Qualité est notre boussole</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="lightbulb" class="w-6 h-6 text-[#F7941D] flex-shrink-0 mt-0.5"></i>
+                            <span>Innovation permanente</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="handshake" class="w-6 h-6 text-[#F7941D] flex-shrink-0 mt-0.5"></i>
+                            <span>Proximité et réactivité</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="sparkles" class="w-6 h-6 text-[#F7941D] flex-shrink-0 mt-0.5"></i>
+                            <span>Intégrité et transparence</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-[#00AEEF] mb-2">100%</div>
+                    <div class="text-gray-600 font-medium">Satisfaction</div>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-[#00AEEF] mb-2">✓</div>
+                    <div class="text-gray-600 font-medium">Expertise Certifiée</div>
+                </div>
+                <div class="text-center p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-[#00AEEF] mb-2">24/7</div>
+                    <div class="text-gray-600 font-medium">Support Réactif</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-dark mb-4">Nos Solutions</h2>
+                <div class="w-24 h-1 bg-orange-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-[#00AEEF]">
+                    <div class="relative h-40 overflow-hidden">
+                        <div class="main-image-container w-full h-full">
+                            <img src="./assets/Image_Informatique.jpg" alt="Informatique et Technologies" class="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0">
+                        </div>
+                        <div class="carousel-container w-full h-full absolute top-0 left-0 hidden overflow-hidden">
+                            <div class="carousel-track w-full h-full flex">
+                                <img src="./assets/Optimisation_de_Systèmes.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Réseaux LAN/WAN">
+                                <img src="./assets/vente_materiel.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Vente Matériel">
+                                <img src="./assets/maintenance_support.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Maintenance proactive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-dark mb-3">Informatique et Technologies</h3>
+                        <p class="service-description text-gray-600 mb-4 text-sm leading-relaxed">
+                            Notre approche combine étude préalable rigoureuse, réalisation précise et maintenance proactive pour garantir la sécurité et la pérennité de vos systèmes informatiques. Bénéficiez d'une infrastructure robuste et sécurisée.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="network" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Réseaux LAN/WAN
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="server" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Vente Matériel
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="settings" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Maintenance proactive
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-[#F7941D]">
+                    <div class="relative h-40 overflow-hidden">
+                        <div class="main-image-container w-full h-full">
+                            <img src="./assets/Image_Solaire.jpg" alt="Électricité et Énergie Solaire" class="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0">
+                        </div>
+                        <div class="carousel-container w-full h-full absolute top-0 left-0 hidden overflow-hidden">
+                            <div class="carousel-track w-full h-full flex">
+                                <img src="./assets/Image_Solaire.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Systèmes solaires">
+                                <img src="./assets/Dimensionnement_energetique.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Dimensionnement">
+                                <img src="./assets/electricite_Generale.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Électricité générale">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-dark mb-3">Électricité et Énergie Solaire</h3>
+                        <p class="service-description text-gray-600 mb-4 text-sm leading-relaxed">
+                            De l'étude dimensionnelle précise à la maintenance régulière, nous concevons des installations solaires qui garantissent votre autonomie énergétique et la longévité optimale de votre matériel photovoltaïque.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="sun" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Systèmes solaires
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="ruler" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Dimensionnement
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="zap" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Électricité générale
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-[#00AEEF]">
+                    <div class="relative h-40 overflow-hidden">
+                        <div class="main-image-container w-full h-full">
+                            <img src="./assets/Image_electronique.jpg" alt="Électronique et Maintenance" class="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0">
+                        </div>
+                        <div class="carousel-container w-full h-full absolute top-0 left-0 hidden overflow-hidden">
+                            <div class="carousel-track w-full h-full flex">
+                                <img src="./assets/Diagnostic-de_pannes.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Diagnostic précis">
+                                <img src="./assets/Reparation_de_cartes.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Réparation complexe">
+                                <img src="./assets/Maintenance_preventive.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Maintenance préventive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-dark mb-3">Électronique et Maintenance</h3>
+                        <p class="service-description text-gray-600 mb-4 text-sm leading-relaxed">
+                            Grâce à un diagnostic précis et une expertise technique pointue, nous assurons la réparation complexe et la maintenance préventive de vos équipements électroniques pour maximiser leur durée de vie.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="search" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Diagnostic précis
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="wrench" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Réparation complexe
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="calendar-check" class="w-4 h-4 text-[#00AEEF] flex-shrink-0"></i>
+                                Maintenance préventive
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-t-4 border-transparent hover:border-[#F7941D]">
+                    <div class="relative h-40 overflow-hidden">
+                        <div class="main-image-container w-full h-full">
+                            <img src="./assets/Image_Formation.jpg" alt="Formation et Conseil" class="w-full h-full object-cover grayscale transition-all duration-500 hover:grayscale-0">
+                        </div>
+                        <div class="carousel-container w-full h-full absolute top-0 left-0 hidden overflow-hidden">
+                            <div class="carousel-track w-full h-full flex">
+                                <img src="./assets/Image_Formation.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Formations ciblées">
+                                <img src="./assets/Expertise_specifique.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Conseil stratégique">
+                                <img src="./assets/Image_Formation.jpg" class="carousel-image w-full h-full object-cover flex-shrink-0" alt="Expertise technique">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-dark mb-3">Formation et Conseil</h3>
+                        <p class="service-description text-gray-600 mb-4 text-sm leading-relaxed">
+                            Nos formations ciblées et notre conseil stratégique sont conçus pour renforcer les capacités de votre équipe, avec une approche pédagogique rigoureuse et un accompagnement personnalisé.
+                        </p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="graduation-cap" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Formations ciblées
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="lightbulb" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Conseil stratégique
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i data-lucide="briefcase" class="w-4 h-4 text-[#F7941D] flex-shrink-0"></i>
+                                Expertise technique
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Notre Équipe Section -->
+    <section id="team" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-dark mb-4">Notre Équipe</h2>
+                <div class="w-24 h-1 bg-orange-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-b-4 border-transparent hover:border-[#F7941D]">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-blue-dark mb-1">Abdoulaye Kaboré</h3>
+                        <p class="text-gray-600">Direction Technique</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-b-4 border-transparent hover:border-[#F7941D]">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-blue-dark mb-1">Mariam Ouédraogo</h3>
+                        <p class="text-gray-600">Expert Solaire</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-b-4 border-transparent hover:border-[#F7941D]">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-blue-dark mb-1">Isaac Traoré</h3>
+                        <p class="text-gray-600">Support IT</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-b-4 border-transparent hover:border-[#F7941D]">
+                    <div class="h-48 bg-gray-200 flex items-center justify-center">
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400"></i>
+                    </div>
+                    <div class="p-6 text-center">
+                        <h3 class="text-xl font-bold text-blue-dark mb-1">Fatou Sanou</h3>
+                        <p class="text-gray-600">Formation et Conseil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-dark mb-4">Foire aux Questions</h2>
+                <div class="w-24 h-1 bg-orange-primary mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-[#00AEEF]">Quel est le délai d intervention ?</span>
+                        <i data-lucide="plus" class="faq-icon w-6 h-6 text-[#00AEEF] transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Nous intervenons généralement dans un délai de 24 à 48 heures pour les demandes urgentes. Pour les projets plus importants, un calendrier précis est établi lors de l étude préalable.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-[#00AEEF]">Proposez vous des contrats de maintenance ?</span>
+                        <i data-lucide="plus" class="faq-icon w-6 h-6 text-[#00AEEF] transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Oui, nous proposons des contrats de maintenance adaptés à vos besoins. Que ce soit pour votre infrastructure informatique, vos installations solaires ou vos équipements électroniques, nous avons des solutions sur mesure.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-[#00AEEF]">Comment se passe l étude préalable ?</span>
+                        <i data-lucide="plus" class="faq-icon w-6 h-6 text-[#00AEEF] transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Notre équipe se déplace sur site pour analyser vos besoins, évaluer l infrastructure existante et définir la solution optimale. Un rapport détaillé avec devis est ensuite fourni gratuitement.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item border border-gray-200 rounded-xl overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-4 flex items-center justify-between text-left bg-white hover:bg-gray-50 transition-colors">
+                        <span class="font-semibold text-[#00AEEF]">Vos interventions sont elles garanties ?</span>
+                        <i data-lucide="plus" class="faq-icon w-6 h-6 text-[#00AEEF] transition-all duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4">
+                        <p class="text-gray-600">Toutes nos interventions sont garanties. Nous offrons une garantie sur les pièces et la main d œuvre selon les normes en vigueur. Votre satisfaction est notre priorité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-dark mb-4">Nous contacter</h2>
+                <div class="w-24 h-1 bg-orange-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                        <i data-lucide="map-pin" class="w-8 h-8 text-[#00AEEF] mb-4"></i>
+                        <h4 class="font-bold text-blue-dark mb-2">Adresse</h4>
+                        <p class="text-gray-600">Ouagadougou, Burkina Faso</p>
+                        <p class="text-gray-500">05 BP 6531 OUAGA 05</p>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                        <i data-lucide="phone" class="w-8 h-8 text-[#00AEEF] mb-4"></i>
+                        <h4 class="font-bold text-blue-dark mb-2">Téléphone</h4>
+                        <a href="tel:+22670314141" class="text-gray-600 hover:text-[#00AEEF] transition-colors">
+                            +226 70 31 41 41
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                        <i data-lucide="mail" class="w-8 h-8 text-[#00AEEF] mb-4"></i>
+                        <h4 class="font-bold text-blue-dark mb-2">Email</h4>
+                        <a href="mailto:contact@excel.it.gmail" class="text-gray-600 hover:text-[#00AEEF] transition-colors">
+                            contact@excel.it.gmail
+                        </a>
+                    </div>
+                    
+                    <div class="bg-gray-50 rounded-2xl p-6 shadow-sm">
+                        <i data-lucide="clock" class="w-8 h-8 text-[#00AEEF] mb-4"></i>
+                        <h4 class="font-bold text-blue-dark mb-2">Heures d'ouverture</h4>
+                        <p class="text-gray-600">Lundi - Vendredi</p>
+                        <p class="text-gray-500">8h00 - 18h00</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl shadow-sm p-8">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nom</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] outline-none transition-all">
+                            <p id="name-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer votre nom</p>
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] outline-none transition-all">
+                            <p id="email-error" class="text-red-500 text-sm mt-1 hidden">Veuillez entrer un email valide</p>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Sujet</label>
+                            <select id="subject" name="subject" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] outline-none transition-all bg-white">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="devis-solaire">Devis Solaire</option>
+                                <option value="maintenance-informatique">Maintenance Informatique</option>
+                                <option value="reparation-electronique">Réparation Électronique</option>
+                                <option value="formation">Formation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] outline-none transition-all" placeholder="Décrivez votre projet..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-[#00AEEF] hover:bg-[#F7941D] text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                            Envoyer
+                        </button>
+                    </form>
+                    
+                    <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-lg text-center">
+                        Merci ! Votre message a été envoyé avec succès. Nous vous contacterons bientôt.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-100 text-gray-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div class="flex items-center justify-center">
+                    <img src="./logo/Logo.jpg.jpeg" alt="Logo Excel IT" class="h-20 w-auto">
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-blue-dark mb-4">Excel IT</h3>
+                    <p class="text-gray-600">L’excellence, notre référence.</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="font-bold text-blue-dark mb-4">Liens Rapides</h3>
+                    <div class="space-y-2">
+                        <a href="#about" class="text-gray-600 hover:text-[#00AEEF] transition-colors">À Propos</a>
+                        <a href="#services" class="text-gray-600 hover:text-[#00AEEF] transition-colors">Nos Solutions</a>
+                        <a href="#contact" class="text-gray-600 hover:text-[#00AEEF] transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 pt-8 text-center">
+                <p class="text-gray-600">&copy; 2026 Excel IT. Tous droits réservés.</p>
+                <p class="text-sm mt-2 text-gray-500">SARL Unipersonnelle</p>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="https://wa.me/22670314141" target="_blank" rel="noopener noreferrer" 
+        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-50">
+        <img src="./icone/whatsapp.png" alt="WhatsApp" class="w-10 h-10">
+    </a>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
